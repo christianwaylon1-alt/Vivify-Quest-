@@ -1,0 +1,23 @@
+# Build output
+/build/
+*.o
+*.so
+*.a
+
+# Restored QPM dependencies (re-create with `qpm restore`)
+/extern/
+
+# Packaged artifacts
+Qivify.qmod
+Qivify-Source.zip
+
+# Editor / tooling
+.vscode/
+.idea/
+compile_commands.json
+.cache/
+*.log
+
+# OS cruft
+.DS_Store
+Thumbs.db
