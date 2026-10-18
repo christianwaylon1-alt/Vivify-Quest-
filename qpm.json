@@ -1,0 +1,32 @@
+{
+  "version": "0.4.0",
+  "sharedDir": "shared",
+  "dependenciesDir": "extern",
+  "info": {
+    "name": "Qivify",
+    "id": "qivify",
+    "version": "1.0.0",
+    "url": "https://github.com/qivify/Qivify",
+    "additionalData": {
+      "overrideSoName": "libqivify.so",
+      "cmake": true
+    }
+  },
+  "workspace": {
+    "scripts": {
+      "build": ["bash ./scripts/build.sh"],
+      "qmod": ["bash ./scripts/build.sh", "bash ./scripts/createqmod.sh"]
+    },
+    "ndk": "^26.0.0",
+    "qmodIncludeDirs": ["build", "extern/libs"],
+    "qmodOutput": "./Qivify.qmod"
+  },
+  "dependencies": [
+    { "id": "beatsaber-hook", "versionRange": "*", "additionalData": {} },
+    { "id": "bs-cordl", "versionRange": "4008.*", "additionalData": {} },
+    { "id": "custom-types", "versionRange": "*", "additionalData": {} },
+    { "id": "scotland2", "versionRange": "*", "additionalData": { "includeQmod": false, "private": true } },
+    { "id": "paper2_scotland2", "versionRange": "*", "additionalData": {} },
+    { "id": "bsml", "versionRange": "*", "additionalData": {} }
+  ]
+}
